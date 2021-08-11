@@ -1,0 +1,22 @@
+Given the roots of polynomial, return the coefficients of the polynomial.
+
+For e.g.
+
+if the roots are 1 & 2, then the polynomial is (x^2 - 3x + 2), hence the output vector will be [2, -3, 1] i.e. elements at position i is the ith coefficient of the polynomial
+
+[execution time limit] 1 seconds (cpp)
+
+[input] array.integer roots
+
+Max 10 elements, Each element between -5 to 5 inclusive
+
+[output] array.integer64
+
+[C++] Syntax Tips
+
+// Prints help message to the console
+// Returns a string
+std::string helloWorld(std::string name) {
+    std::cout << "This prints to the console when you Run Tests" << std::endl;
+    return "Hello, " + name;
+}

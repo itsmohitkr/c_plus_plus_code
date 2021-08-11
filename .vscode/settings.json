@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "xiosbase": "cpp",
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "C_Cpp.dimInactiveRegions": false
+}
