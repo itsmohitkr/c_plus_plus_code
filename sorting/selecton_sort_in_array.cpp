@@ -16,7 +16,7 @@ void selection_sort(int a[], int n) {
 		//After this loop we can do swap finally
 		swap(a[i], a[min_index]);
 	}
-} p
+} 
 
 int main() {
 

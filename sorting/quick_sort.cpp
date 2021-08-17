@@ -1,10 +1,11 @@
 #include<iostream>
 using namespace std;
+//https://www.youtube.com/watch?v=COk73cpQbFQ
 
 int Partition(int arr[], int s, int e) {
 
     int pivot = arr[e];
-    int p_index = s;
+    int p_index = s; // this is the partiton index initially pointing to s
     for (int i = s; i < e; i++) {
         if (arr[i] <= pivot) {
             swap(arr[i], arr[p_index]);

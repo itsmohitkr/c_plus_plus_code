@@ -27,7 +27,7 @@ int fib(int n, int dp[]) {
 	int ans;
 	ans = fib(n - 1, dp) + fib(n - 2, dp);
 
-	return dp[n] = ans;
+	return dp[n] = ans; // before storing the ans lets update it in dp array;
 }
 
 int main() {

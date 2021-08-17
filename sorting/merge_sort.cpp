@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+//https://www.youtube.com/watch?v=aDX3MFL0tYs
 
 void merge(int a[], int s, int e)
 {
@@ -56,6 +57,7 @@ void mergesort(int a[], int s, int e)
     mergesort(a, mid + 1, e);
 
     //merge two parts
+    // merge function ka keval ye kaam hai ki do sorted array ko merge karga result should be a sorted array
     merge(a, s, e);
 }
 int main()
