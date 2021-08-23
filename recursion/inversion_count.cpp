@@ -16,12 +16,12 @@ int merge(int a[], int s, int e)
         }
         else {
             temp[k] = a[j];
-            cnt + =  mid - (i - 1);
+            cnt + =  mid - i + 1;
             k++;
             j++;
         }
     }
-    // foll the array if some elements are left in one of the array
+    // fill the array if some elements are left in one of the array
     while (i <= mid) {
         temp[k] = a[i];
         k++;

@@ -1,5 +1,4 @@
 #include<iostream>
-#include<conio.h>
 using namespace std;
 int f(int n)
 {
@@ -17,6 +16,6 @@ int main()
 {
     int n;
     cin>>n;
-    cout<<n<<" th term of fibonacci series is "<<f(n);
+    cout<<n<<" nth term of fibonacci series is "<<f(n);
 }
 

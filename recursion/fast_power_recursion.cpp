@@ -1,4 +1,6 @@
 #include<iostream>
+#include<conio.h>
+
 #include <math.h>
 using namespace std;
 
@@ -11,7 +13,7 @@ int power(int a, int n)
     }
     return a * power(a, n - 1);
 }
-int fast_power(int a, int n  // this is more efficient way--- 0(logn)
+int fast_power(int a, int n) // this is more efficient way--- 0(logn)
 {
     // base case
     if (n == 0) {
@@ -19,10 +21,10 @@ int fast_power(int a, int n  // this is more efficient way--- 0(logn)
     }
 
     if (n % 2 == 0) {
-        return pow(fastpower(a, n / 2), 2);
+        return pow(fast_power(a, n / 2), 2);
     }
     else{
-        return a * pow(fastpower(a, n / 2), 2);
+        return a * pow(fast_power(a, n / 2), 2);
     }
 }
 int main()
