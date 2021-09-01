@@ -33,9 +33,7 @@ void replacepi(char a[], int index)
     // Getting the answer from
     // recursion for the smaller
     // problem
-    else {
-        replacepi(a, index + 1);
-    }
+    replacepi(a, index + 1);
 }
 int main()
 {

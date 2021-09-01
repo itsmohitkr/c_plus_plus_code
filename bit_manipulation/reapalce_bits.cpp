@@ -19,7 +19,7 @@ int main()
 {
 	int n,m,i,j;
 	cin >> n >> m >> i >> j;
-	
+
 	cout << replace_bits(n, m, i, j) << endl;
 	return 0;
 

@@ -13,7 +13,7 @@ int fib(int n){
 }
 
 // 2. top down approch O(N)
-
+	
 int fib(int n, int dp[]) {
 	// base case
 	if (n == 0 or n == 1) {
@@ -26,8 +26,7 @@ int fib(int n, int dp[]) {
 	}
 	int ans;
 	ans = fib(n - 1, dp) + fib(n - 2, dp);
-
-	return dp[n] = ans; // before storing the ans lets update it in dp array;
+	return dp[n] = ans; // before returning the ans lets update it in dp array;
 }
 
 int main() {

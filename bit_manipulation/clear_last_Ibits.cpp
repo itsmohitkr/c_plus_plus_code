@@ -3,7 +3,7 @@ using namespace std;
 
 // clear last i bits form right
 int clear_last_I_bits(int n, int i) {
-	int mask = (-1 << i);
+	int mask = (-1 << i); // -1 means 111111111
 	return mask & n;
 }
 

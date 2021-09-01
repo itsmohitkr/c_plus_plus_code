@@ -6,7 +6,7 @@ void printspelling(int n)
 	if (n == 0) {
 		return;
 	}
-	//rec case-1st print the spelling of 204
+	//rec case-1st print the spelling of 2048
 	printspelling(n / 10);
 	int digits = n % 10;
 	cout << words[digits] << " ";
