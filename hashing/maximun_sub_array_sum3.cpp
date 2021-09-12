@@ -1,5 +1,5 @@
 #include<iostream>
-#include<algorithm>
+#include<climits>
 using namespace std;
 int main()
 {
@@ -8,7 +8,8 @@ int main()
     int a[1000];
 
     int cs = 0;
-    int ms = 0;
+    int ms = INT_MIN;
+
 
     for (int i = 0; i < n; i++) {
         cin >> a[i];
@@ -16,6 +17,7 @@ int main()
     }
     
     // kadanes algorithm for maximum subarray-- O(n)-- best approch
+    // you would have to check for separate for all -ve elements of array
 
     for (int i = 0; i < n; i++) {
         cs = cs + a[i];
