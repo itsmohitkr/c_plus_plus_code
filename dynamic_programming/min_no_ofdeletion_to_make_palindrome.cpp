@@ -33,9 +33,15 @@ int lcs(string x,string y,int m,int n){
 
 
 int main(){
-    string x = "acbcf";
-    string y = "abcdaf";
+    string x;
+    cin >> x;
 
-    cout << lcs(x, y, x.length(), y.length());
+    string y = x;
+    reverse(y.begin(), y.end());
+
+    int Lcs=lcs(x, y, x.length(), y.length());
+
+    cout << "Minimum no of deletion to make palindrome " << x.length()-Lcs << endl;
+   
     return 0;
 }

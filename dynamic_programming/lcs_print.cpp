@@ -3,9 +3,10 @@
 using namespace std;
 
 // recursive approch
-int lcs(string x,string y,int m,int n){
-    
-    // table
+void print_lcs(string x,string y,int m,int n){
+
+    // 1. create table
+
     int t[m + 1][n + 1];
 
     // base case init
@@ -28,14 +29,37 @@ int lcs(string x,string y,int m,int n){
             }
         }
     }
-    return t[m][n];
-}
+    
+    //2 print table
+    int i = m;
+    int j = n;
+    string ans = "";
 
+    while(i>0 and j>0){
+
+        if(x[i-1]==y[j-1]){
+            ans.push_back(x[i - 1]);
+            i--;
+            j--;
+        }
+        else{
+            if(t[i][j-1]>t[i-1][j]){
+                j--;
+            }
+            else{
+                i--;
+            }
+        }
+    }
+
+    reverse(ans.begin(), ans.end());
+    cout << ans;
+}
 
 int main(){
     string x = "acbcf";
     string y = "abcdaf";
 
-    cout << lcs(x, y, x.length(), y.length());
+    print_lcs(x, y, x.length(), y.length());
     return 0;
 }

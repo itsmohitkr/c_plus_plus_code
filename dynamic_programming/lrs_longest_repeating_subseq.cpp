@@ -20,21 +20,25 @@ int lcs(string x,string y,int m,int n){
     // fill remaining row,column
     for (int i = 1; i < m + 1; i++){
         for (int j = 1; j < n + 1;j++){
-            if(x[i-1]==y[j-1]){
+            if(x[i-1]==y[j-1] and i!=j){
                 t[i][j] = 1 + t[i - 1][j - 1];
             }
             else{
                 t[i][j] = max(t[i - 1][j], t[i][j-1]);
+
             }
+            cout << t[i][j] << " ";
+
         }
+        cout << endl;
     }
     return t[m][n];
 }
 
 
 int main(){
-    string x = "acbcf";
-    string y = "abcdaf";
+    string x = "aabebcdd";
+    string y = x;
 
     cout << lcs(x, y, x.length(), y.length());
     return 0;

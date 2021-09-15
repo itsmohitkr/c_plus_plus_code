@@ -33,9 +33,15 @@ int lcs(string x,string y,int m,int n){
 
 
 int main(){
-    string x = "acbcf";
-    string y = "abcdaf";
+    string x = "heap";
+    string y = "pea";
 
-    cout << lcs(x, y, x.length(), y.length());
+    int Lcs=lcs(x, y, x.length(), y.length());
+
+    int min_no_of_deletion = x.length() - Lcs;
+    int min_no_of_insertion = y.length() - Lcs;
+
+    cout << "min_no_of_deletion " << min_no_of_deletion << endl;
+    cout<< "min_no_of_insertion "<<min_no_of_insertion;
     return 0;
 }

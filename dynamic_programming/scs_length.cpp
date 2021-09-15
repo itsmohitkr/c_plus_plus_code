@@ -33,9 +33,11 @@ int lcs(string x,string y,int m,int n){
 
 
 int main(){
-    string x = "acbcf";
-    string y = "abcdaf";
+    string x = "geek";
+    string y = "eks";
 
-    cout << lcs(x, y, x.length(), y.length());
+    int lcs_length=lcs(x, y, x.length(), y.length());
+    int scs_length = x.length() + y.length() - lcs_length;
+    cout << scs_length;
     return 0;
 }
