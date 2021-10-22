@@ -1,40 +1,82 @@
-#include<iostream>
-#include<queue>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-typedef pair<int, pair<int, int>> node;
-vector<int>mergeKsortedArrays(vector<vector<int>>arr){
-    vector<int> ans;
-    priority_queue<node, vector<node>, greater<node>> pq;
+class heap{
+    private:
+        vector<int> v;
+        bool minheap;
 
-    for (int i = 0; i < pq.size();i++){
-        pq.push({arr[i][0], {i, 0}});
-    }
-
-    while(!pq.empty()){
-        node current = pq.top();
-        current.pop();
-        int element = current.first;
-        int x = current.second.first;
-        int y = current.second.second;
-
-        ans.push_back(element);
-
-        if(y+1<arr[x].size()){
-            pq.push({arr[x][y + 1], {x, y + 1}});
+        bool compare(int a,int b){
+            if(minheap){
+                return a < b;
+            }
+            else{
+                return a > b;
+            }
         }
 
-    }
-    return ans;
-}
+        void heapify(int indx){
+            int i = indx; // node index
+            int left = 2 * i; // left index
 
+            int right = 2 * i + 1; // right index
+
+            int min_index = i;
+            int last = v.size() - 1;
+
+            if(left<=last and compare(v[left],v[i])){
+                min_index = left;
+            }
+            if(right<=last and compare(v[right],v[min_index])){
+                min_index = right;
+            }
+
+            if(min_index!=indx){
+                swap(v[indx], v[min_index]);
+                heapify(min_index);
+            }
+        }
+
+    public:
+
+        heap(int default_size=10,bool type=true){
+            v.reserve(default_size);
+            v.push_back(-1);
+            minheap = type;
+        }
+
+        void push(int data){
+            v.push_back(data);
+            int index = v.size() - 1;
+            int parent = index / 2;
+
+            while(index>1 and compare(v[index],v[parent)]){
+                swap(v[index], v[parent]);
+                index = parent;
+                parent = parent / 2;
+            }
+        }
+
+        void pop(){
+            swap(v[1], v[v.size() - 1]);
+            v.pop_back();
+            heapify(1); // node 1 or index 1 ko heapify kardo so that sbb theek position pr aa jye 
+
+        }
+
+        void top(){
+            return v[1];
+        }
+
+        bool empty(){
+            if(v.size()==1){
+                return true;
+            }
+            return false;
+        }
+}
+    
 int main(){
-    vector<vector<int >>arr{{2, 6, 12, 15},
-                            {1, 3, 14, 20},
-                            {3, 5, 8, 10}};
-	vector<int> output = mergeKsortedArrays(arr);
-	for (auto x : output) {
-		cout << x << " ";
-	}
-	return 0;
+    
 }

@@ -74,6 +74,8 @@ void printRightview(node*root, int level, int &maxlevel) //
 	printRightview(root->right, level + 1, maxlevel);
 	printRightview(root->left, level + 1, maxlevel);
 }
+
+
 void printRightView(node* root) // o(n)--complexity  GFG SOLUTION
 {
 	if (!root)
@@ -108,6 +110,7 @@ void printRightView(node* root) // o(n)--complexity  GFG SOLUTION
 		}
 	}
 }
+
 int main()
 {
 	node*root = build_tree();

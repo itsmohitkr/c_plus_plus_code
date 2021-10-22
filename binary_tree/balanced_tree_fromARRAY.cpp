@@ -82,3 +82,4 @@ int main() {
     node*root = buildTreeFromArray(a, 0, n - 1);
     bfs(root);
     return 0;
+}

@@ -25,6 +25,7 @@ int main()
 	// {
 	// 	cout << *(it) << ",";
 	// }
+	
 	for (int x : s) {
 		cout << x << " ";
 	}

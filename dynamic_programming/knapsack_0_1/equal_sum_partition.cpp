@@ -35,8 +35,19 @@ int subset_sum(int n, int arr[], int sum)
 
 int main()
 {
-    int arr[] = {2, 3, 7, 8, 10};
-    int n = 5;
-    int sum = 11;
-    subset_sum(n, arr, sum) ? cout << "true":cout<<"false";
+    int arr[] = {1,16,11,6};
+    int n = 4;
+    int sum = 0;
+    for (int i = 0; i < n;i++){
+        sum += arr[i];
+    }
+    // if sum is odd no partition would be made
+
+    if(sum%2!=0){
+        cout << "false";
+    }
+    else{
+        subset_sum(n, arr, sum/2) ? cout << "true":cout<<"false";
+    }
+    return 0;
 }

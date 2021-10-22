@@ -22,7 +22,7 @@ int main() {
     }
 
     string name;
-    cin >> name ;
+    cin >> name;
 
     if (phonebook.count(name) == 0) {
         cout << "absent ";

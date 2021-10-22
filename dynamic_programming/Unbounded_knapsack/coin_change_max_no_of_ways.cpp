@@ -44,4 +44,6 @@ int main()
     int n = sizeof(coins) / sizeof(int); // size of price arra
     int sum = 5;
     cout << max_ways_toMake_sum(n, coins,sum);
+    
 }
+ 

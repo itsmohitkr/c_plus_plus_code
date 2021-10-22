@@ -4,12 +4,12 @@ using namespace std;
 
 int main() {
 	//code here
-	priority_queue<int> leftheap; // max heap
-	priority_queue<int, vector<int>, greater<int>> rightheap; // min heap
+	priority_queue<int> max_heap; // max heap
+	priority_queue<int, vector<int>, greater<int>> min_heap; // min heap
 
 	int d;
 	cin >> d;
-	leftheap.push(d);
+	max_heap.push(d);
 
 	float med = d;
 	cout << "median=" << med << endl;
@@ -18,38 +18,37 @@ int main() {
 
 	while (d != -1) {
 		// logic
-
-		if (leftheap.size() > rightheap.size()) {
+		if (max_heap.size() > min_heap.size()) {
 			if (d < med) {
-				rightheap.push(leftheap.top());
-				leftheap.pop();
-				leftheap.push(d);
+				min_heap.push(max_heap.top());
+				max_heap.pop();
+				max_heap.push(d);
 			}
 			else {
-				rightheap.push(d);
+				min_heap.push(d);
 			}
-			med = (rightheap.top() + leftheap.top()) / 2.0;
+			med = (min_heap.top() + max_heap.top()) / 2.0;
 		}
-		else if (leftheap.size() == rightheap.size()) {
+		else if (max_heap.size() == min_heap.size()) {
 			if (d < med) {
-				leftheap.push(d);
-				med = leftheap.top();
+				max_heap.push(d);
+				med = max_heap.top();
 			}
 			else {
-				rightheap.push(d);
-				med = rightheap.top();
+				min_heap.push(d);
+				med = min_heap.top();
 			}
 		}
 		else {
 			if (d > med) {
-				leftheap.push(rightheap.top());
-				rightheap.pop();
-				rightheap.push(d);
+				max_heap.push(min_heap.top());
+				min_heap.pop();
+				min_heap.push(d);
 			}
 			else {
-				leftheap.push(d);
+				max_heap.push(d);
 			}
-			med = (rightheap.top() + leftheap.top()) / 2.0;
+			med = (min_heap.top() + max_heap.top()) / 2.0;
 		}
 		cout << "median = " << med << endl;
 		cin >> d;
