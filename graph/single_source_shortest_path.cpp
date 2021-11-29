@@ -2,6 +2,7 @@
 #include <map>
 #include <list>
 #include <queue>
+#include <climits>
 using namespace std;
 
 template <typename T>
@@ -19,10 +20,10 @@ public:
 		map<T, int>dist;
 		queue<T>q;
 
-		// all other node have dis INT_MAX;
+		// all other node have dis INT_MAX except src node;
 		for (auto node_pair : l) {
 			T node = node_pair.first;
-			dis[node] = INT_MAX;
+			dist[node] = INT_MAX;
 		}
 		q.push(src);
 		dist[src] = 0;
@@ -43,7 +44,7 @@ public:
 		for (auto node_pair : l) {
 			T node = node_pair.first;
 			int d = dist[node];
-			cout << "Node" << node << "Dist from src" << d << endl;
+			cout << "Node " << node << " Dist from src " << d << endl;
 		}
 	}
 };

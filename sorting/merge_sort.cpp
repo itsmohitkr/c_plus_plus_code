@@ -52,7 +52,7 @@ void mergesort(int a[], int s, int e)
     int mid = (s + e) / 2;
 
     // 2.recursively two arrays -(s,mid) and (mid+1,e)
-
+ 
     mergesort(a, s, mid);
     mergesort(a, mid + 1, e);
 

@@ -23,7 +23,7 @@ void insertion_sort(int arr[], int n) {
 int main() {
 
 
-	int n, key;
+	int n, key;	
 	cin >> n;
 
 	int a[1000];
