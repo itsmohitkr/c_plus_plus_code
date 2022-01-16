@@ -33,6 +33,7 @@ void print(node*head)
 	}
 	cout << endl;
 }
+
 void reverse(node*&head)
 {
 	node*c = head;
@@ -49,6 +50,7 @@ void reverse(node*&head)
 	}
 	head = p;
 }
+
 int main()
 {
 	node *head = NULL;

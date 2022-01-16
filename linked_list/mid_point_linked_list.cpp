@@ -33,6 +33,7 @@ void print(node*head)
 	}
 	cout << endl;
 }
+
 node* midpoint(node*&head)
 {
 	if (head->next == NULL || head == NULL) {

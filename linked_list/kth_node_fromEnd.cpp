@@ -39,8 +39,8 @@ node* kth_nodes_end(node*&head, int k) {
 		return head;
 	}
 	node*slow = head;
-
 	node*fast = head;
+	
 	while (k > 0) {
 		fast = fast->next;
 		k--;
@@ -64,6 +64,6 @@ int main()
 
 	print(head);
 
-	node*m = kth_nodes_end(head, 4);
+	node*m = kth_nodes_end(head, 3);
 	cout << m->data << " ";
 }

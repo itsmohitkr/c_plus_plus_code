@@ -40,7 +40,7 @@ void bfs(node*root)
 		}
 		if (f->right) {   // it means right child is existing
 			q.push(f->right);
-		}
+		}	
 		
 	}
 	return;
