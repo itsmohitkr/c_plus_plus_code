@@ -27,7 +27,7 @@ int main() {
 
 	char s5[100];
 	cin.get(s5, 100); // read white spaces
-	cin.get(s5, 100, '.')  // cin.gets basically takes three argument third one is delimeter
+	cin.get(s5, 100, '.'); // cin.gets basically takes three argument third one is delimeter
 	cout << s5;
 
 

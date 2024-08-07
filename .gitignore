@@ -1,1 +1,6 @@
-.exe
+# Ignore executable files
+*.exe
+*.dll
+*.out
+*.bin
+
