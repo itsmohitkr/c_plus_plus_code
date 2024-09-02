@@ -16,7 +16,7 @@ int merge(int a[], int s, int e)
         }
         else {
             temp[k] = a[j];
-            cnt + =  mid - i + 1;
+            cnt+=  mid - i + 1;
             k++;
             j++;
         }

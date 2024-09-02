@@ -9,7 +9,7 @@ void merge(int a[], int s, int e)
     int i = s;       // we have keep two pointer i and j
     int j = mid + 1;
     int k = s;  // k-pointing to the start of the temp array
-    int temp[1000];// making temporary array
+    int temp[1000];  // making temporary array
 
     while (i <= mid && j <= e) {
         if (a[i] < a[j]) {

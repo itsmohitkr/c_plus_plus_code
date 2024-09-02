@@ -25,7 +25,6 @@ class hashfun {
 public:
     size_t operator()(const student & s) const {
         return s.firstname.length() + s.lastname.length();
-
     }
 };
 
@@ -47,7 +46,6 @@ int main() {
     cout << student_map[s3] << endl;
     // iterate over all students
     for (auto s : student_map) {
-
         cout << s.first.firstname << " " << s.first.rollno << endl << "marks" << s.second << endl;
     }
 
